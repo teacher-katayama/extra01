@@ -4,12 +4,22 @@
     - 時間割は要らないから除去した。代わりに、NotionDBから今日の予定を抽出するように変更した
     - 天気予報は今日の天気に変更し、加えて絵文字で表してみた
     - 今日は何の日か表示してみた
+- 毎朝6時にLINEへ通知するようにしてみた
+    - 通知する内容（おみくじが無い以外は画面表示と同じ）
+        - 今日の日付、天気、今日は何の日、今日の予定
 ## 準備するもの
 - Notionから今日の予定を抽出する
     - `Notion APIキー`（'secret_'からはじまる49桁の文字列）
     - `NotionのデータベースID`（32桁の文字列）
 - 天気予報を絵文字で表す
     - `OpenAI APIキー`（'sk-'からはじまる51桁の文字列）
+- LINE通知
+    - `ユーザーID`（33桁の文字列）
+    - `アクセストークン`（172桁の文字列）
 ## 準備方法
-- daily_schedule.pyの所定の位置に`Notion APIキー`と`NotionのデータベースID`を書き込む
-- weather_to_emoji.pyの所定の位置に`OpenAI APIキー`を書き込む
+- Web表示
+    - daily_schedule.pyの所定の位置に`Notion APIキー`と`NotionのデータベースID`を書き込む
+    - weather_to_emoji.pyの所定の位置に`OpenAI APIキー`を書き込む
+- LINE通知
+    - send_daily_schedule.pyの所定の位置に`Notion APIキー`と`NotionのデータベースID`を書き込む
+    - send_line_message.pyの所定の位置に`ユーザーID`と`アクセストークン`を書き込む
