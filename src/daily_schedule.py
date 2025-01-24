@@ -28,11 +28,11 @@ class DailySchedule:
         """初期化メソッド"""
         self.notion = Client(auth=self.NOTION_API_KEY)
 
-    def get_today_schedule(self) -> str:
+    def get_today_schedule(self) -> list:
         """本日の予定を取得する
 
         Returns:
-            str: 本日の予定
+            list: 本日の予定
 
         Notes:
             フィルター条件: 状態が完了と一致しない

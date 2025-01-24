@@ -97,11 +97,11 @@ class WeatherAPI:
             return None
 
 
-    def get_today_osaka_weather(self) -> str:
+    def get_today_osaka_weather(self) -> Optional[str]:
         """今日の大阪の天気を取得する
 
         Returns:
-            str: 今日の大阪の天気
+            Optional[str]: 今日の大阪の天気
         """
         forecast = self.get_weather_forecast(Prefecture.OSAKA)  # 大阪の天気予報を取得
         if forecast is None:
